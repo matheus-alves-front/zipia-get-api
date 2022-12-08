@@ -26,10 +26,10 @@ export function Navigation({
     const [filterName, setFilterName] = useState<string>('')
 
     // click functions to pass the name of selected and clear the filter
-    function handleSelect(e) {
+    function handleSelect(name: string) {
         setIsLastWeek(false)
         setIsSearch(true)
-        setFilterName(e.target.value)
+        setFilterName(name)
     }
 
     function handleLastWeek() {
@@ -53,7 +53,7 @@ export function Navigation({
             <header className={styles.container}>
                 {/* <button onClick={() => handleLastWeek()}>Last week</button> */}
                 <select name="Company Names" id="company-names"
-                    onChange={(e) => handleSelect(e)}
+                    onChange={(e) => handleSelect(e.target.value)}
                 >
                     <option value="All" selected disabled>Choose a Company</option>
                     {jobsApi.map((item) => {

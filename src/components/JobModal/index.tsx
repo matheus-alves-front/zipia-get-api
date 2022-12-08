@@ -38,7 +38,7 @@ export function JobsModal({
                 I know this is not recommened but I had to do this setInnerHTML because 
                 the api response of this have HTML tags and the time is short
                 */}
-                <div className={styles.jobDescription} dangerouslySetInnerHTML={{ __html: jobDescription}}></div>
+                <div className={styles.jobDescription} dangerouslySetInnerHTML={{ __html: jobDescription || ''}}></div>
             </div>
         </div>
     )
