@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 10px 0;
+
+    button, select {
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+}
